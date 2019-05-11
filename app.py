@@ -42,10 +42,10 @@ def dosearch():
 
 @app.route('/showgraph')
 def showgraph():
-    with open ("/tmp/00agraph", "r") as f:
     #with open (session['path']+"graph", "r") as f:
+    with open ("/tmp/00agraph", "r") as f:
         graphdata=f.read()
-    print(str(graphdata))
+    print("there should be data here-->"+str(graphdata) + "<<<-")
     #return render_template('cytoscape.html', graphdata=str(graphdata))
     return render_template('cytoscape.html', results=str(graphdata))
 
